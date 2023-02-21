@@ -1,4 +1,4 @@
-#include "eldagenius.h"
+#include "main.h"
 /**
  * print_last_digit - a function that prints the last digit of a number
  * @nld: number's last digit result
