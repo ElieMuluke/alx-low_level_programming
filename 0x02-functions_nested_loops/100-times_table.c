@@ -20,9 +20,9 @@ void print_times_table(int n)
         {
             res = i * j;
             if (j == 0)
-                printf("%d", res);
+                printf("%d\t", res);
             else
-                printf(" %d", res);
+                printf(" %d\t", res);
             if (j == n)
                 printf("\n");
             else
