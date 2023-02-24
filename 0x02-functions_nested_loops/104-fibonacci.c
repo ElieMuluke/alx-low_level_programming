@@ -8,6 +8,19 @@
  */
 int main(void)
 {
+    int i, n = 98;
+    unsigned int a = 1, b = 2, c;
 
-	return (0);
+    printf("%u, %u", a, b);
+
+    for (i = 3; i <= n; i++) {
+        c = a + b;
+        printf(", %u", c);
+        a = b;
+        b = c;
+    }
+
+    printf("\n");
+
+    return 0;
 }
