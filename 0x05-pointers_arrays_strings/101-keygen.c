@@ -16,7 +16,7 @@ int main(void)
 
 	for (i = 0; i < 10; i++)
 	{
-		password[i] = rand() % 94 + 33; // generate a random character in the ASCII range 33-126
+		password[i] = rand() % 94 + 33;
 	}
 
 	password[10] = '\0';
