@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
  * main - Entry point
@@ -7,6 +9,19 @@
  */
 int main(void)
 {
+	int i;
+	char password[11];
+
+	srand(time(NULL));
+
+	for (i = 0; i < 10; i++)
+	{
+		password[i] = rand() % 94 + 33; // generate a random character in the ASCII range 33-126
+	}
+
+	password[10] = '\0';
+
+	printf("Generated password: %s\n", password);
 
 	return (0);
 }
