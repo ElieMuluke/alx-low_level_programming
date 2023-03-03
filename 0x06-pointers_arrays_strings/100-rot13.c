@@ -1,35 +1,31 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * leet - Entry point
- * ONE if, TWO loops only...
- * @n: input
- * Return: Always 0 (Success)
+ * rot13 - encoder rot13
+ * @s: pointer to string params
+ *
+ * Return: *s
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+char *rot13(char *s)
+{
+	int i;
+	int j;
+	char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-char *rot13(char *str) {
-    char *result = malloc(strlen(str) + 1);
-    if (!result) {
-        return NULL;
-    }
-
-    int i, j;
-    for (i = 0; str[i]; i++) {
-        if (str[i] >= 'a' && str[i] <= 'z') {
-            j = (str[i] - 'a' + 13) % 26;
-            result[i] = 'a' + j;
-        } else if (str[i] >= 'A' && str[i] <= 'Z') {
-            j = (str[i] - 'A' + 13) % 26;
-            result[i] = 'A' + j;
-        } else {
-            result[i] = str[i];
-        }
-    }
-
-    result[i] = '\0';
-    return result;
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; j < 52; j++)
+		{
+			if (s[i] == data1[j])
+			{
+				s[i] = datarot[j];
+				break;
+			}
+		}
+	}
+	return (s);
 }
+
