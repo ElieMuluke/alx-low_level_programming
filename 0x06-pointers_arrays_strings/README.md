@@ -33,8 +33,3 @@ What you should learn from this project:
 
 ### [8. rot13](./8-rot13.c)
 * Write a function that encodes a string using rot13.
-
----
-
-## Author
-* **Elie Muluke** - [Elie](https://github.com/ElieMuluke)
