@@ -48,8 +48,3 @@ What you should learn from this project:
 
 ### [11. Holberton School, 98 Battery Street, San Francisco CA 94111](./11-print_to_98.c)
 * Write a function that prints all natural numbers from n to 98, followed by a new line.
-
----
-
-## Author
-* **Derrick Gee** - [kai-dg](https://github.com/kai-dg)
