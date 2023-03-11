@@ -1,4 +1,4 @@
-# 0x06. C - Even more pointers, arrays and strings
+# 0x07. C - Even more pointers, arrays and strings
 
 ## Description
 What you should learn from this project:
@@ -36,4 +36,6 @@ What you should learn from this project:
 ### [8. Double pointer, double fun](./9-set_string.c)
 * Write a function that sets the value of a pointer to a char.
 
+### [100. Double pointer, double fun](./100-set_string.c)
+* Write a function that sets the value of a pointer to a char.
 ---
