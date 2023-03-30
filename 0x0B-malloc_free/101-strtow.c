@@ -2,10 +2,10 @@
 #include <string.h>
 
 /**
- * count_words - Counts the number of words in a string
- * @str: The string to count the words of
+ * count_words - Counts the number of words in a string.
+ * @str: The string to count the words of.
  *
- * Return: The number of words in the string
+ * Return: The number of words in the string.
  */
 int count_words(char *str)
 {
@@ -14,13 +14,18 @@ int count_words(char *str)
     in_word = 0;
     count = 0;
 
-    for (i = 0; str[i] != '\0'; i++) {
-        if (str[i] != ' ') {
-            if (!in_word) {
+    for (i = 0; str[i] != '\0'; i++)
+    {
+        if (str[i] != ' ')
+        {
+            if (!in_word)
+            {
                 in_word = 1;
                 count++;
             }
-        } else {
+        }
+        else
+        {
             in_word = 0;
         }
     }
@@ -29,28 +34,31 @@ int count_words(char *str)
 }
 
 /**
- * strtow - Splits a string into words
- * @str: The string to split
+ * strtow - Splits a string into words.
+ * @str: The string to split.
  *
- * Return: A pointer to an array of strings (words)
+ * Return: A pointer to an array of strings (words).
  */
 char **strtow(char *str)
 {
     char **words;
     int i, j, k, n_words, word_len, in_word;
 
-    if (str == NULL || str[0] == '\0') {
+    if (str == NULL || str[0] == '\0')
+    {
         return NULL;
     }
 
     n_words = count_words(str);
 
-    if (n_words == 0) {
+    if (n_words == 0)
+    {
         return NULL;
     }
 
     words = malloc((n_words + 1) * sizeof(char *));
-    if (words == NULL) {
+    if (words == NULL)
+    {
         return NULL;
     }
 
@@ -58,20 +66,29 @@ char **strtow(char *str)
     word_len = 0;
     j = 0;
 
-    for (i = 0; str[i] != '\0'; i++) {
-        if (str[i] != ' ') {
-            if (!in_word) {
+    for (i = 0; str[i] != '\0'; i++)
+    {
+        if (str[i] != ' ')
+        {
+            if (!in_word)
+            {
                 in_word = 1;
                 word_len = 1;
                 k = i;
-            } else {
+            }
+            else
+            {
                 word_len++;
             }
-        } else {
-            if (in_word) {
+        }
+        else
+        {
+            if (in_word)
+            {
                 in_word = 0;
                 words[j] = malloc((word_len + 1) * sizeof(char));
-                if (words[j] == NULL) {
+                if (words[j] == NULL)
+                {
                     return NULL;
                 }
                 strncpy(words[j], &str[k], word_len);
@@ -81,9 +98,11 @@ char **strtow(char *str)
         }
     }
 
-    if (in_word) {
+    if (in_word)
+    {
         words[j] = malloc((word_len + 1) * sizeof(char));
-        if (words[j] == NULL) {
+        if (words[j] == NULL)
+        {
             return NULL;
         }
         strncpy(words[j], &str[k], word_len);
