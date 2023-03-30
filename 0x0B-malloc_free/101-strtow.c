@@ -10,6 +10,7 @@
 int count_words(char *str)
 {
 	int i, in_word, count;
+
 	in_word = 0;
 	count = 0;
 
@@ -28,8 +29,10 @@ int count_words(char *str)
 			in_word = 0;
 		}
 	}
+
 	return count;
 }
+
 /**
  * strtow - Splits a string into words.
  * @str: The string to split.
@@ -45,7 +48,8 @@ char **strtow(char *str)
 	{
 		return NULL;
 	}
-	n_words = count_words(str);
+
+    n_words = count_words(str);
 
 	if (n_words == 0)
 	{
@@ -53,7 +57,6 @@ char **strtow(char *str)
 	}
 
 	words = malloc((n_words + 1) * sizeof(char *));
-
 	if (words == NULL)
 	{
 		return NULL;
@@ -84,18 +87,17 @@ char **strtow(char *str)
 			{
 				in_word = 0;
 				words[j] = malloc((word_len + 1) * sizeof(char));
-
 				if (words[j] == NULL)
 				{
 					return NULL;
 				}
 				strncpy(words[j], &str[k], word_len);
-
 				words[j][word_len] = '\0';
 				j++;
 			}
 		}
 	}
+
 	if (in_word)
 	{
 		words[j] = malloc((word_len + 1) * sizeof(char));
@@ -107,6 +109,7 @@ char **strtow(char *str)
 		words[j][word_len] = '\0';
 		j++;
 	}
+
 	words[j] = NULL;
 
 	return words;
