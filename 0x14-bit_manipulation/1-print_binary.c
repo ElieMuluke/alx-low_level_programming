@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * to print the binary of the decimal number
- * a is number to be printed in binary format
+ * print_binary - to print the binary of the decimal number
+ * @a: is number to be printed in binary format
  */
 
 
