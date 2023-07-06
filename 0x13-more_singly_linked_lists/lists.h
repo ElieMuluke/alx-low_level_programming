@@ -6,17 +6,17 @@
 #include <string.h>
 
 /**
- * struct listint_t - more singly linked list
+ * struct listint_t - singly linked list
  * @n: integer
  * @next: points to the next node
  *
- * Description: more singly linked list node structure
- * for Holberton project
+ * Description: singly linked list node structure
+ * 
  */
 typedef struct listint_t
 {
-	int n;
-	struct listint_t *next;
+    int n;
+    struct listint_t *next;
 } listint_t;
 
 int _putchar(char c);
